@@ -1,6 +1,6 @@
-import { Human } from "../mappers/humansMapper";
+import { Character } from "../mappers/charactersMapper";
 
-export interface HumanApiItem {
+export interface CharacterApiItem {
   id: number;
   name: string;
   img: string;
@@ -19,19 +19,19 @@ export interface HumanApiItem {
 }
 
 // La respuesta completa de la API
-export interface HumanApiResponse {
+export interface CharacterApiResponse {
   info: {
     count: number;
     pages: number;
     next_page: string | null;
     prev_page: string | null;
   };
-  results: HumanApiItem[]; // ← usa HumanApiItem, no HumanApiResponse
+  results: CharacterApiItem[]; // ← usa CharacterApiItem, no CharacterApiResponse
 }
 
-export interface HumanResponse {
-  info: HumanApiResponse["info"];
-  results: Human[];
+export interface CharacterResponse {
+  info: CharacterApiResponse["info"];
+  results: Character[];
 }
 
 export interface Relative {

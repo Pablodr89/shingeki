@@ -1,6 +1,6 @@
 export default function FiltersContainer() {
   return (
-    <section className="bg-surface-container p-6 rounded-lg border-l-2 border-outline-variant/20 relative overflow-hidden">
+    <div className="bg-surface-container p-6 rounded-lg border-l-2 border-outline-variant/20 relative overflow-hidden">
       <div className="texture-overlay absolute inset-0"></div>
       <div className="relative z-10 flex flex-col md:flex-row gap-6 items-end">
         <div className="flex-1 w-full group">
@@ -47,6 +47,6 @@ export default function FiltersContainer() {
           </select>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

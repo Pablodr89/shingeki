@@ -1,8 +1,8 @@
 const apiBaseUrl = "https://api.attackontitanapi.com";
 
 export const ApiRoutes = {
-  humans: `${apiBaseUrl}/characters`,
+  Characters: `${apiBaseUrl}/characters`,
   titans: `${apiBaseUrl}/titans`,
-  singleHuman: (id: number) => `${apiBaseUrl}/characters/${id}`,
+  singleCharacter: (id: number) => `${apiBaseUrl}/characters/${id}`,
   singleTitan: (id: number) => `${apiBaseUrl}/titans/${id}`,
 };

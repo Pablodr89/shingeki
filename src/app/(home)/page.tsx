@@ -4,15 +4,15 @@ import {
   HydrationBoundary,
   QueryClient,
 } from "@tanstack/react-query";
-import ListHumans from "./ListHumans";
-import { getListHumans } from "../services/listHumansService";
+import ListCharacters from "./ListCharacters";
+import { getListCharacters } from "../services/charactersService";
 
 export default async function HomePage() {
   const queryClient = new QueryClient();
 
   await queryClient.prefetchInfiniteQuery({
-    queryKey: ["listHumans"],
-    queryFn: getListHumans,
+    queryKey: ["ListCharacters"],
+    queryFn: getListCharacters,
     initialPageParam: 1,
   });
 
@@ -20,7 +20,7 @@ export default async function HomePage() {
 
   return (
     <HydrationBoundary state={dehydratedState}>
-      <ListHumans />
+      <ListCharacters />
     </HydrationBoundary>
   );
 }
