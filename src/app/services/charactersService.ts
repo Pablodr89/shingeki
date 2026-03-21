@@ -7,14 +7,21 @@ import { ApiRoutes } from "./apiRoutes";
 
 export const getListCharacters = async ({
   pageParam = 1,
+  // searchText?,
+  // gender?,
+  // status?,
 }): Promise<CharacterResponse> => {
   try {
-    const response = await fetch(`${ApiRoutes.Characters}?page=${pageParam}`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
+    const response = await fetch(
+      // `${ApiRoutes.Characters}?page=${pageParam}&name=${searchText}&gender=${gender}&status=${status}`,
+      `${ApiRoutes.Characters}?page=${pageParam}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
       },
-    });
+    );
 
     const data: CharacterApiResponse = await response.json();
 

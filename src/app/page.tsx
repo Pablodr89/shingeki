@@ -1,9 +1,6 @@
-import HomePage from "./(home)/page";
+import { redirect } from "next/navigation";
+import { AppRoutes } from "../../AppRoutes";
 
 export default function Home() {
-  return (
-    <div>
-      <HomePage />
-    </div>
-  );
+  redirect(AppRoutes.home);
 }

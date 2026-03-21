@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import { Providers } from "./providers/providers";
 
 export const metadata: Metadata = {
-  title: "Shinke No Kyojin APP",
+  title: "Shingeki No Kyojin APP",
   description:
     "Listado con filtrado de personajes del anime y detalle de cada personaje",
 };

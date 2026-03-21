@@ -11,7 +11,7 @@ export default async function HomePage() {
   const queryClient = new QueryClient();
 
   await queryClient.prefetchInfiniteQuery({
-    queryKey: ["ListCharacters"],
+    queryKey: ["listCharacters"],
     queryFn: getListCharacters,
     initialPageParam: 1,
   });

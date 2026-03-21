@@ -1,11 +1,14 @@
 "use client";
 import FiltersContainer from "../components/FiltersContainer";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useCharactersList } from "../hooks/useCharactersList";
 import CardListCharacters from "./CardListCharacter";
 import Spinner from "../components/Spinner/Spinner";
 
 export default function ListCharacters() {
+  const [searchText, setSearchText] = useState("");
+  const [genderFilter, setGenderFilter] = useState("All");
+  const [statusFilter, setStatusFilter] = useState("All");
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading } =
     useCharactersList();
 
@@ -24,7 +27,14 @@ export default function ListCharacters() {
 
   return (
     <section className="flex flex-col gap-8 pb-20">
-      <FiltersContainer />
+      <FiltersContainer
+        searchText={searchText}
+        setSearchText={setSearchText}
+        genderFilter={genderFilter}
+        setGenderFilter={setGenderFilter}
+        statusFilter={statusFilter}
+        setStatusFilter={setStatusFilter}
+      />
 
       <div className="flex flex-col items-center gap-8">
         {isLoading ? (
@@ -32,8 +42,8 @@ export default function ListCharacters() {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {data?.pages.map((page) =>
-              page.results.map((Character) => (
-                <CardListCharacters key={Character.id} Character={Character} />
+              page.results.map((character) => (
+                <CardListCharacters key={character.id} character={character} />
               )),
             )}
           </div>
