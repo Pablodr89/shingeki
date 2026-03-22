@@ -16,6 +16,7 @@ export default function CardListCharacters({
           alt="image character"
           width={300}
           height={400}
+          priority
         />
 
         <div

@@ -12,6 +12,7 @@ export default function CardListTitans({ titan }: { titan: Titan }) {
           alt="image titan"
           width={300}
           height={400}
+          priority
         />
 
         <div
