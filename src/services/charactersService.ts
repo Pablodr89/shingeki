@@ -1,7 +1,7 @@
 import {
   CharacterApiResponse,
   CharacterResponse,
-} from "@/interfaces/characterInterface";
+} from "@/interfaces/charactersInterface";
 import { mapCharacters } from "@/mappers/charactersMapper";
 import { ApiRoutes } from "./apiRoutes";
 
