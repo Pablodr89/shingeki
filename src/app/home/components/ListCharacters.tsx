@@ -5,11 +5,12 @@ import { useCharactersList } from "../hooks/useCharactersList";
 import CardListCharacters from "./CardListCharacter";
 import Spinner from "@/components/Spinner/Spinner";
 import { Character } from "@/mappers/charactersMapper";
+import { Gender, Status } from "@/interfaces";
 
 export default function ListCharacters() {
   const [searchText, setSearchText] = useState("");
-  const [genderFilter, setGenderFilter] = useState("All");
-  const [statusFilter, setStatusFilter] = useState("All");
+  const [genderFilter, setGenderFilter] = useState<Gender>(Gender.ALL);
+  const [statusFilter, setStatusFilter] = useState<Status>(Status.ALL);
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading } =
     useCharactersList();
 

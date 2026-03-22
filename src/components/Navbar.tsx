@@ -16,7 +16,7 @@ export default function Navbar() {
         <nav className="hidden md:flex items-center gap-6 font-headline tracking-tight">
           <Link
             className={
-              pathname === AppRoutes.home
+              pathname.includes(AppRoutes.home)
                 ? "text-emerald-200 underline underline-offset-4"
                 : "text-zinc-500 hover:text-emerald-200 transition-colors duration-300"
             }
@@ -27,7 +27,7 @@ export default function Navbar() {
 
           <Link
             className={
-              pathname === AppRoutes.titans
+              pathname.includes(AppRoutes.titans)
                 ? "text-emerald-200 underline underline-offset-4"
                 : "text-zinc-500 hover:text-emerald-200 transition-colors duration-300"
             }

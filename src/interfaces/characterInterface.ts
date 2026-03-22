@@ -18,7 +18,6 @@ export interface CharacterApiItem {
   episodes: string[];
 }
 
-// La respuesta completa de la API
 export interface CharacterApiResponse {
   info: {
     count: number;
@@ -26,7 +25,7 @@ export interface CharacterApiResponse {
     next_page: string | null;
     prev_page: string | null;
   };
-  results: CharacterApiItem[]; // ← usa CharacterApiItem, no CharacterApiResponse
+  results: CharacterApiItem[];
 }
 
 export interface CharacterResponse {

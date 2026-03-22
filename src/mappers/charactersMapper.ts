@@ -11,14 +11,14 @@ export interface Character {
   groups: Groups[];
 }
 
-export const mapCharacters = (Characters: CharacterApiItem[]): Character[] =>
-  Characters.map((Character) => ({
-    id: Character.id,
-    name: Character.name,
-    img: Character.img,
-    species: Character.species,
-    gender: Character.gender,
-    status: Character.status,
-    occupation: Character.occupation,
-    groups: Character.groups,
+export const mapCharacters = (characters: CharacterApiItem[]): Character[] =>
+  characters.map((character) => ({
+    id: character.id,
+    name: character.name,
+    img: character.img,
+    species: character.species,
+    gender: character.gender,
+    status: character.status,
+    occupation: character.occupation,
+    groups: character.groups,
   }));
