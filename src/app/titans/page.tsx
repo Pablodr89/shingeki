@@ -1,3 +1,5 @@
+import ListTitans from "./components/ListTitans";
+
 export default function Titans() {
-  return <div>Titans</div>;
+  return <ListTitans />;
 }
