@@ -1,7 +1,7 @@
 "use client";
 import FiltersContainer from "@/components/FiltersContainer";
 import { Alliance } from "@/interfaces";
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { useTitansList } from "../hooks/useTitansList";
 import Spinner from "@/components/Spinner/Spinner";
 import CardListTitans from "./CardListTitans";
