@@ -1,17 +1,18 @@
 export enum Gender {
-  MALE = "male",
-  FEMALE = "female",
+  MALE = "Male",
+  FEMALE = "Female",
   ALL = "",
 }
 
 export enum Status {
-  ACTIVE = "active",
-  DECEASED = "deceased",
+  ACTIVE = "Active",
+  DECEASED = "Deceased",
   ALL = "",
 }
 
 export enum Alliance {
-  MARLEY = "marley",
-  ELDIA = "eldia",
+  MARLEY = "Marley",
+  ELDIA = "Eldia",
+  NONE = "None",
   ALL = "",
 }

@@ -9,10 +9,9 @@ import { Titan } from "@/mappers/titansMapper";
 
 export default function ListTitans() {
   const { data, isLoading } = useTitansList();
-
-  console.log(data);
   const [searchText, setSearchText] = useState("");
   const [alliance, setAlliance] = useState<Alliance>(Alliance.ALL);
+
   return (
     <section className="flex flex-col gap-8 pb-20">
       <FiltersContainer

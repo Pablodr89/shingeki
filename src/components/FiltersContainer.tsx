@@ -60,7 +60,12 @@ export default function FiltersContainer({
           setAlliance && (
             <Dropdown
               title="Alianza"
-              options={[Alliance.ALL, Alliance.ELDIA, Alliance.MARLEY]}
+              options={[
+                Alliance.ALL,
+                Alliance.ELDIA,
+                Alliance.MARLEY,
+                Alliance.NONE,
+              ]}
               selected={alliance}
               setSelected={setAlliance}
             />
