@@ -7,7 +7,7 @@ import {
 import ListCharacters from "./components/ListCharacters";
 import { getListCharacters } from "@/services/charactersService";
 
-export default async function HomePage() {
+export default async function Characters() {
   const queryClient = new QueryClient();
 
   await queryClient.prefetchInfiniteQuery({

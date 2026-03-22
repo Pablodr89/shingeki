@@ -41,7 +41,7 @@ export default function FiltersContainer({
           setAlliance={setAlliance}
         />
 
-        {pathname.includes(AppRoutes.home) ? (
+        {pathname.includes(AppRoutes.characters) ? (
           <>
             {genderFilter !== undefined && setGenderFilter && (
               <Dropdown
