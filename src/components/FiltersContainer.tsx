@@ -8,7 +8,7 @@ import { Dispatch, SetStateAction } from "react";
 
 interface FiltersContainerProps {
   searchText: string;
-  setSearchText: (text: string) => void;
+  setSearchText: Dispatch<SetStateAction<string>>;
   genderFilter?: Gender;
   setGenderFilter?: Dispatch<SetStateAction<Gender>>;
   statusFilter?: Status;
@@ -33,7 +33,13 @@ export default function FiltersContainer({
     <div className="bg-surface-container p-6 rounded-lg border-l-2 border-outline-variant/20 relative">
       <div className="texture-overlay absolute inset-0"></div>
       <div className="relative z-10 flex flex-col md:flex-row gap-6 items-end">
-        <SearchBar searchText={searchText} setSearchText={setSearchText} />
+        <SearchBar
+          searchText={searchText}
+          setSearchText={setSearchText}
+          setStatusFilter={setStatusFilter}
+          setGenderFilter={setGenderFilter}
+          setAlliance={setAlliance}
+        />
 
         {pathname.includes(AppRoutes.home) ? (
           <>
@@ -43,6 +49,7 @@ export default function FiltersContainer({
                 options={[Gender.ALL, Gender.MALE, Gender.FEMALE]}
                 selected={genderFilter}
                 setSelected={setGenderFilter}
+                setSearchText={setSearchText}
               />
             )}
 
@@ -52,6 +59,7 @@ export default function FiltersContainer({
                 options={[Status.ALL, Status.ACTIVE, Status.DECEASED]}
                 selected={statusFilter}
                 setSelected={setStatusFilter}
+                setSearchText={setSearchText}
               />
             )}
           </>
@@ -68,6 +76,7 @@ export default function FiltersContainer({
               ]}
               selected={alliance}
               setSelected={setAlliance}
+              setSearchText={setSearchText}
             />
           )
         )}

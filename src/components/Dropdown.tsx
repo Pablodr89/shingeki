@@ -8,6 +8,7 @@ interface DropdownProps<T> {
   options: string[];
   selected: T;
   setSelected: Dispatch<SetStateAction<T>>;
+  setSearchText: Dispatch<SetStateAction<string>>;
 }
 
 export const Dropdown = <T,>({
@@ -15,6 +16,7 @@ export const Dropdown = <T,>({
   options,
   selected,
   setSelected,
+  setSearchText,
 }: DropdownProps<T>) => {
   const [open, setOpen] = useState(false);
 
@@ -50,6 +52,7 @@ export const Dropdown = <T,>({
               onClick={() => {
                 setSelected(option as T);
                 setOpen(false);
+                setSearchText("");
               }}
               className={`px-4 py-2 text-sm cursor-pointer transition-colors hover:bg-surface-container-highest
                 ${selected === option ? "text-primary" : "text-on-surface"}`}
