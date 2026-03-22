@@ -5,6 +5,7 @@ export interface Titan {
   name: string;
   img: string;
   height: string;
+  abilities: string[];
   allegiance: string;
 }
 
@@ -14,5 +15,6 @@ export const mapTitans = (titans: TitanApiItem[]): Titan[] =>
     name: titan.name,
     img: titan.img,
     height: titan.height,
+    abilities: titan.abilities,
     allegiance: titan.allegiance,
   }));

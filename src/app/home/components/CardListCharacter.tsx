@@ -12,7 +12,6 @@ export default function CardListCharacters({
       <div className="aspect-3/4 overflow-hidden relative">
         <Image
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-          data-alt="Stoic soldier portrait with sharp features"
           src={character.img ? character.img : icons.person}
           alt="image character"
           width={300}
@@ -45,7 +44,7 @@ export default function CardListCharacters({
 
           {character.groups.length > 0 && (
             <span className="flex items-center gap-1">
-              <Image src={icons.shield} alt="gender" width={20} height={20} />
+              <Image src={icons.shield} alt="group" width={20} height={20} />
               {character.groups.map((group) => group.name).join(", ")}
             </span>
           )}

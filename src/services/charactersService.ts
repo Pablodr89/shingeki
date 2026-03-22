@@ -14,7 +14,7 @@ export const getListCharacters = async ({
   try {
     const response = await fetch(
       // `${ApiRoutes.Characters}?page=${pageParam}&name=${searchText}&gender=${gender}&status=${status}`,
-      `${ApiRoutes.Characters}?page=${pageParam}`,
+      `${ApiRoutes.characters}?page=${pageParam}`,
       {
         method: "GET",
         headers: {

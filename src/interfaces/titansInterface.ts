@@ -14,8 +14,8 @@ export interface TitanApiResponse {
   info: {
     count: number;
     pages: number;
-    next_page: string | null;
-    prev_page: string | null;
+    next_page: null;
+    prev_page: null;
   };
   results: TitanApiItem[];
 }
