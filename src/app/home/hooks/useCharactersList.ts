@@ -1,6 +1,6 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
-import { getListCharacters } from "../services/charactersService";
-import { CharacterResponse } from "../interfaces/characterInterface";
+import { getListCharacters } from "@/services/charactersService";
+import { CharacterResponse } from "@/interfaces/characterInterface";
 
 export const useCharactersList = () => {
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading } =

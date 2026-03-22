@@ -1,8 +1,8 @@
 import {
   CharacterApiResponse,
   CharacterResponse,
-} from "../interfaces/characterInterface";
-import { mapCharacters } from "../mappers/charactersMapper";
+} from "@/interfaces/characterInterface";
+import { mapCharacters } from "@/mappers/charactersMapper";
 import { ApiRoutes } from "./apiRoutes";
 
 export const getListCharacters = async ({

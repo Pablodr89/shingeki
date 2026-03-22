@@ -1,9 +1,10 @@
 "use client";
-import FiltersContainer from "../components/FiltersContainer";
+import FiltersContainer from "@/components/FiltersContainer";
 import { useEffect, useRef, useState } from "react";
 import { useCharactersList } from "../hooks/useCharactersList";
 import CardListCharacters from "./CardListCharacter";
-import Spinner from "../components/Spinner/Spinner";
+import Spinner from "@/components/Spinner/Spinner";
+import { Character } from "@/mappers/charactersMapper";
 
 export default function ListCharacters() {
   const [searchText, setSearchText] = useState("");
@@ -42,7 +43,7 @@ export default function ListCharacters() {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {data?.pages.map((page) =>
-              page.results.map((character) => (
+              page.results.map((character: Character) => (
                 <CardListCharacters key={character.id} character={character} />
               )),
             )}

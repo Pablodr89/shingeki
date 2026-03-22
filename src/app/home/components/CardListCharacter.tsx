@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { icons } from "../images";
-import { Character } from "../mappers/charactersMapper";
+import { icons } from "@/images";
+import { Character } from "@/mappers/charactersMapper";
 
 export default function CardListCharacters({
   character,

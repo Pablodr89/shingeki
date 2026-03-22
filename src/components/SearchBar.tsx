@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { icons } from "../images";
+import { icons } from "@/images";
 
 interface SearchBarProps {
   searchText: string;

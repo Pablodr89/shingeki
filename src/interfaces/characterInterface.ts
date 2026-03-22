@@ -1,4 +1,4 @@
-import { Character } from "../mappers/charactersMapper";
+import { Character } from "@/mappers/charactersMapper";
 
 export interface CharacterApiItem {
   id: number;

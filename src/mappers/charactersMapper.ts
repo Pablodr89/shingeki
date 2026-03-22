@@ -1,4 +1,4 @@
-import { Groups, CharacterApiItem } from "../interfaces/characterInterface";
+import { Groups, CharacterApiItem } from "@/interfaces/characterInterface";
 
 export interface Character {
   id: number;

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import { icons } from "../images";
+import { icons } from "@/images";
 
 interface DropdownProps {
   title: string;
