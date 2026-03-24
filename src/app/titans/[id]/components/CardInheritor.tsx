@@ -1,5 +1,7 @@
 import { useGetCharacter } from "@/app/characters/[id]/hooks/useGetCharacter";
+import { AppRoutes } from "@/AppRoutes";
 import Image from "next/image";
+import Link from "next/link";
 
 interface CardFormerInheritorProps {
   inheritor: string;
@@ -10,7 +12,10 @@ export default function CardInheritor({ inheritor }: CardFormerInheritorProps) {
   const { data } = useGetCharacter(id);
 
   return (
-    <div className="group cursor-pointer">
+    <Link
+      href={`${AppRoutes.characters}/${id}`}
+      className="group cursor-pointer"
+    >
       <div className="relative aspect-3/4 mb-6 overflow-hidden bg-surface-container-high border-b-2 border-transparent group-hover:border-primary transition-all">
         {data && (
           <Image
@@ -33,6 +38,6 @@ export default function CardInheritor({ inheritor }: CardFormerInheritorProps) {
       <h4 className="font-headline text-2xl text-on-surface group-hover:text-primary transition-colors">
         {data?.name}
       </h4>
-    </div>
+    </Link>
   );
 }
