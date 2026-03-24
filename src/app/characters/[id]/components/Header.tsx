@@ -28,6 +28,7 @@ export default function Header({ data }: HeaderProps) {
                 width={0}
                 height={0}
                 sizes="100vw"
+                priority
               />
 
               <div

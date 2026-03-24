@@ -1,13 +1,16 @@
+import { Relative } from "@/interfaces/charactersInterface";
 import FamilyMember from "./FamilyMember";
 
 interface CharacterFamilyProps {
-  family: string | undefined;
-  members: string[] | undefined;
+  name: string | undefined;
+  relatives: Relative[] | undefined;
 }
 export default function CharacterFamily({
-  family,
-  members,
+  name,
+  relatives,
 }: CharacterFamilyProps) {
+  const members =
+    (relatives ?? []).length > 0 ? (relatives ?? [])[0].members : [];
   return (
     <div className="space-y-8">
       <div>
@@ -16,10 +19,10 @@ export default function CharacterFamily({
         </h3>
 
         <div className="bg-surface-container-low p-6 border-t-2 border-outline-variant/20">
-          <p className="font-headline text-xl italic mb-4">{family}</p>
+          <p className="font-headline text-xl italic mb-4">{name} family</p>
 
           <div className="grid grid-cols-2 gap-4">
-            {members?.map((member, i) => (
+            {members.map((member, i) => (
               <FamilyMember key={i} member={member} />
             ))}
           </div>
