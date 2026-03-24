@@ -14,25 +14,28 @@ export default function Roles({ roles }: RolesProps) {
         </h3>
 
         <div className="space-y-4">
-          {roles?.map((role, i) => (
-            <div
-              key={i}
-              className="flex items-center gap-6 p-4 bg-surface-container-high hover:bg-emerald-900/10 transition-colors duration-300"
-            >
-              <Image
-                src={icons.roles}
-                alt="icon attack"
-                width={40}
-                height={40}
-              />
+          {roles?.map(
+            (role, i) =>
+              role !== "" && (
+                <div
+                  key={i}
+                  className="flex items-center gap-6 p-4 bg-surface-container-high hover:bg-emerald-900/10 transition-colors duration-300"
+                >
+                  <Image
+                    src={icons.roles}
+                    alt="icon attack"
+                    width={40}
+                    height={40}
+                  />
 
-              <div>
-                <p className="font-label text-xs font-black uppercase tracking-widest text-on-surface">
-                  {role}
-                </p>
-              </div>
-            </div>
-          ))}
+                  <div>
+                    <p className="font-label text-xs font-black uppercase tracking-widest text-on-surface">
+                      {role}
+                    </p>
+                  </div>
+                </div>
+              ),
+          )}
         </div>
       </div>
     </div>
