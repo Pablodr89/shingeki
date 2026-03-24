@@ -56,7 +56,7 @@ export default function FiltersContainer({
             {statusFilter !== undefined && setStatusFilter && (
               <Dropdown
                 title="Estado Vital"
-                options={[Status.ALL, Status.ACTIVE, Status.DECEASED]}
+                options={[Status.ALL, Status.ALIVE, Status.DECEASED]}
                 selected={statusFilter}
                 setSelected={setStatusFilter}
                 setSearchText={setSearchText}

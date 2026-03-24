@@ -7,12 +7,23 @@ import {
 import ListCharacters from "./components/ListCharacters";
 import { getListCharacters } from "@/services/charactersService";
 
-export default async function Characters() {
+export default async function Characters({
+  searchParams,
+}: {
+  searchParams: Promise<{ name?: string; gender?: string; status?: string }>;
+}) {
   const queryClient = new QueryClient();
+  const { name, gender, status } = await searchParams;
 
   await queryClient.prefetchInfiniteQuery({
-    queryKey: ["listCharacters"],
-    queryFn: getListCharacters,
+    queryKey: ["listCharacters", searchParams],
+    queryFn: ({ pageParam = 1 }) =>
+      getListCharacters({
+        pageParam,
+        name: name,
+        gender: gender,
+        status: status,
+      }),
     initialPageParam: 1,
   });
 

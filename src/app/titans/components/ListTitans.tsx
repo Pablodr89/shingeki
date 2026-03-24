@@ -24,7 +24,11 @@ export default function ListTitans() {
       />
 
       <div className="flex flex-col items-center gap-8">
-        {isLoading ? (
+        {filteredTitans?.length === 0 ? (
+          <p className="text-2xl font-bold italic text-emerald-100 uppercase tracking-widest font-headline">
+            No se ha encontrado ningún titan con tus criterios
+          </p>
+        ) : isLoading ? (
           <Spinner />
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

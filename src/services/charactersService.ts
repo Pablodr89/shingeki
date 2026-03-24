@@ -8,14 +8,19 @@ import { ApiRoutes } from "./apiRoutes";
 
 export const getListCharacters = async ({
   pageParam = 1,
-  // searchText?,
-  // gender?,
-  // status?,
+  name = "",
+  gender = "",
+  status = "",
 }): Promise<CharacterResponse> => {
+  const params = new URLSearchParams();
+  params.set("page", String(pageParam));
+  if (name) params.set("name", name);
+  if (gender) params.set("gender", gender);
+  if (status) params.set("status", status);
+
   try {
     const response = await fetch(
-      // `${ApiRoutes.Characters}?page=${pageParam}&name=${searchText}&gender=${gender}&status=${status}`,
-      `${ApiRoutes.characters}?page=${pageParam}`,
+      `${ApiRoutes.characters}?${params.toString()}`,
       {
         method: "GET",
         headers: {

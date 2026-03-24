@@ -5,7 +5,7 @@ export enum Gender {
 }
 
 export enum Status {
-  ACTIVE = "Active",
+  ALIVE = "Alive",
   DECEASED = "Deceased",
   ALL = "",
 }
