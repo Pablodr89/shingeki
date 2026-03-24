@@ -1,3 +1,5 @@
+import Button from "@/components/Button";
+
 interface InfoTitan {
   height: string;
   allegiance: string;
@@ -53,6 +55,10 @@ export default function InfoTitan({
               ))}
             </div>
           </div>
+        </div>
+
+        <div className="pt-10">
+          <Button title="Titan favorito" onClickHandler={() => {}} />
         </div>
       </div>
     </div>

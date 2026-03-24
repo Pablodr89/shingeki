@@ -8,6 +8,7 @@ export interface CharacterApiItem {
   species: string[];
   gender: string;
   age: number;
+  height: string;
   relatives: Relative[];
   birthplace: string;
   residence: string;

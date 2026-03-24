@@ -2,7 +2,7 @@ import Image from "next/image";
 import InfoTitan from "./InfoTitan";
 import { TitanApiItem } from "@/interfaces/titansInterface";
 import CardInheritor from "./CardInheritor";
-import Button from "../../components/Button";
+import Button from "@/components/Button";
 
 interface HeaderProps {
   data: TitanApiItem | undefined;
@@ -48,8 +48,6 @@ export default function Header({ data }: HeaderProps) {
           <CardInheritor inheritor={current_inheritor} />
         </div>
       </div>
-
-      <Button title="Titan favorito" onClickHandler={() => {}} />
     </section>
   );
 }
