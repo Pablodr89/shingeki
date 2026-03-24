@@ -16,7 +16,7 @@ export default async function Characters({
   const { name, gender, status } = await searchParams;
 
   await queryClient.prefetchInfiniteQuery({
-    queryKey: ["listCharacters", searchParams],
+    queryKey: ["listCharacters", { name, gender, status }],
     queryFn: ({ pageParam = 1 }) =>
       getListCharacters({
         pageParam,
