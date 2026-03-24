@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { icons } from "@/images";
 import { Character } from "@/mappers/charactersMapper";
+import Link from "next/link";
+import { AppRoutes } from "@/AppRoutes";
 
 export default function CardListCharacters({
   character,
@@ -8,7 +10,10 @@ export default function CardListCharacters({
   character: Character;
 }) {
   return (
-    <div className="group cursor-pointer bg-surface-container-low hover:bg-surface-container rounded-lg transition-all duration-500 overflow-hidden relative border-l-2 border-primary/20">
+    <Link
+      href={`${AppRoutes.characters}/${character.id}`}
+      className="group cursor-pointer bg-surface-container-low hover:bg-surface-container rounded-lg transition-all duration-500 overflow-hidden relative border-l-2 border-primary/20"
+    >
       <div className="aspect-3/4 overflow-hidden relative">
         <Image
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
@@ -51,6 +56,6 @@ export default function CardListCharacters({
           )}
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

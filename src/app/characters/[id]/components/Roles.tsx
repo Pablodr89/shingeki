@@ -10,7 +10,7 @@ export default function Roles({ roles }: RolesProps) {
     <div className="space-y-8">
       <div>
         <h3 className="font-label text-xs font-black uppercase tracking-[0.4em] text-primary mb-6">
-          Roles tácticos
+          Titan
         </h3>
 
         <div className="space-y-4">
