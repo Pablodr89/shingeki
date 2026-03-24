@@ -32,6 +32,7 @@ export default function ListCharacters() {
   });
   const loaderRef = useRef<HTMLDivElement>(null);
 
+  //TODO: Refactor
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       const params = new URLSearchParams();
