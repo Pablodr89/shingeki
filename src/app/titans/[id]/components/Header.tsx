@@ -2,7 +2,6 @@ import Image from "next/image";
 import InfoTitan from "./InfoTitan";
 import { TitanApiItem } from "@/interfaces/titansInterface";
 import CardInheritor from "./CardInheritor";
-import Button from "@/components/Button";
 
 interface HeaderProps {
   data: TitanApiItem | undefined;
