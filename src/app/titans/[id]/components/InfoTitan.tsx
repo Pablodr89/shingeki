@@ -1,16 +1,17 @@
 import Button from "@/components/Button";
+import { TitanApiItem } from "@/interfaces/titansInterface";
+import { useTitanStore } from "@/store/titanStore";
 
 interface InfoTitan {
-  height: string;
-  allegiance: string;
-  abilities: string[];
+  data: TitanApiItem | undefined;
 }
 
-export default function InfoTitan({
-  height,
-  allegiance,
-  abilities,
-}: InfoTitan) {
+export default function InfoTitan({ data }: InfoTitan) {
+  const { setTitan } = useTitanStore();
+
+  if (!data) return null;
+
+  const { height, allegiance, abilities } = data;
   return (
     <div className="md:col-span-4 space-y-12">
       <div className="border-l-2 border-outline-variant/20 pl-8">
@@ -58,7 +59,10 @@ export default function InfoTitan({
         </div>
 
         <div className="pt-10">
-          <Button title="Titan favorito" onClickHandler={() => {}} />
+          <Button
+            title="Titan favorito"
+            onClickHandler={() => setTitan(data)}
+          />
         </div>
       </div>
     </div>

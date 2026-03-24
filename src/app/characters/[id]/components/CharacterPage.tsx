@@ -8,7 +8,6 @@ import Roles from "./Roles";
 
 export default function CharacterPage({ id }: { id: string }) {
   const { data, isLoading } = useGetCharacter(id);
-  console.log(data);
 
   return (
     <div className="pt-28 pb-32 min-h-screen relative overflow-hidden">

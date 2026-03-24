@@ -1,14 +1,18 @@
 import Button from "@/components/Button";
 import { CharacterApiItem } from "@/interfaces/charactersInterface";
+import { useCharacterStore } from "@/store/characterStore";
 
 interface InfoCharacterProps {
   data: CharacterApiItem | undefined;
 }
 
 export default function InfoCharacter({ data }: InfoCharacterProps) {
+  const { setCharacter } = useCharacterStore();
+
   if (!data) return null;
 
   const { name, alias, species, occupation } = data;
+
   return (
     <div className="lg:col-span-7 pt-12">
       <h1 className="font-headline text-7xl md:text-8xl italic font-extrabold text-on-surface mb-6 leading-tight tracking-tighter">
@@ -54,7 +58,10 @@ export default function InfoCharacter({ data }: InfoCharacterProps) {
       </div>
 
       <div className="pt-10">
-        <Button title="Personaje favorito" onClickHandler={() => {}} />
+        <Button
+          title="Personaje favorito"
+          onClickHandler={() => setCharacter(data)}
+        />
       </div>
     </div>
   );

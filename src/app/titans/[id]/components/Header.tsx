@@ -10,7 +10,7 @@ interface HeaderProps {
 export default function Header({ data }: HeaderProps) {
   if (!data) return null;
 
-  const { img, name, height, allegiance, abilities, current_inheritor } = data;
+  const { img, name, current_inheritor } = data;
 
   return (
     <section className="flex flex-col gap-10">
@@ -37,11 +37,7 @@ export default function Header({ data }: HeaderProps) {
       </div>
 
       <div className="flex justify-around gap-14 w-full">
-        <InfoTitan
-          height={height}
-          allegiance={allegiance}
-          abilities={abilities}
-        />
+        <InfoTitan data={data} />
 
         <div className="md:col-span-8">
           <CardInheritor inheritor={current_inheritor} />
