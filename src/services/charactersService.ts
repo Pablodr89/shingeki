@@ -1,4 +1,5 @@
 import {
+  CharacterApiItem,
   CharacterApiResponse,
   CharacterResponse,
 } from "@/interfaces/charactersInterface";
@@ -29,6 +30,23 @@ export const getListCharacters = async ({
       info: data.info,
       results: mapCharacters(data.results),
     };
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const getCharacter = async (id: string): Promise<CharacterApiItem> => {
+  try {
+    const response = await fetch(`${ApiRoutes.characters}/${id}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    const data: CharacterApiItem = await response.json();
+
+    return data;
   } catch (error) {
     throw error;
   }

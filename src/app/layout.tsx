@@ -20,7 +20,7 @@ export default function RootLayout({
         <Navbar />
 
         <Providers>
-          <main className="flex flex-1 flex-col max-[2000px]:max-w-7xl min-[2000px]:max-w-400 mx-auto pt-40">
+          <main className="flex flex-1 flex-col max-[2000px]:max-w-7xl min-[2000px]:max-w-400 mx-auto">
             {children}
           </main>
         </Providers>

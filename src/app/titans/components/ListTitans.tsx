@@ -15,7 +15,7 @@ export default function ListTitans() {
   const filteredTitans = useFilteredTitans(data, searchText, alliance);
 
   return (
-    <section className="flex flex-col gap-8 pb-20">
+    <section className="flex flex-col gap-8 pb-20 pt-40">
       <FiltersContainer
         searchText={searchText}
         setSearchText={setSearchText}
