@@ -63,7 +63,7 @@ export default function InfoCharacter({ data }: InfoCharacterProps) {
         <Button
           title="Personaje favorito"
           onClickHandler={() => setCharacter(data)}
-          customClasses="w-full"
+          customClasses="w-full lg:w-1/3"
         />
       </div>
     </div>
