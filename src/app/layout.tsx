@@ -7,6 +7,10 @@ export const metadata: Metadata = {
   title: "Shingeki No Kyojin APP",
   description:
     "Listado con filtrado de personajes del anime y detalle de cada personaje",
+  robots: "index, follow",
+  alternates: {
+    canonical: "https://shingeki-theta.vercel.app/characters",
+  },
 };
 
 export default function RootLayout({
