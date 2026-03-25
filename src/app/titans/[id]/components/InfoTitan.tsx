@@ -14,7 +14,7 @@ export default function InfoTitan({ data }: InfoTitan) {
   const { height, allegiance, abilities } = data;
   return (
     <div className="md:col-span-4 space-y-12">
-      <div className="border-l-2 border-outline-variant/20 pl-8">
+      <div className="border-l-2 border-outline-variant/20 lg:pl-8">
         <h2 className="font-label text-xs text-secondary tracking-[0.3em] uppercase mb-8">
           Información Táctica
         </h2>
@@ -58,7 +58,7 @@ export default function InfoTitan({ data }: InfoTitan) {
           </div>
         </div>
 
-        <div className="pt-10">
+        <div className="hidden lg:inline-block pt-10">
           <Button
             title="Titan favorito"
             onClickHandler={() => setTitan(data)}

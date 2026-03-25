@@ -15,7 +15,7 @@ export default function Header({ data }: HeaderProps) {
       <div className="absolute top-0 right-0 w-1/2 h-full bg-linear-to-l from-primary-container/10 to-transparent pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-12 items-start mb-12 lg:mb-24">
           <div className="lg:col-span-5 relative group">
             <div className="absolute -top-4 -left-4 w-32 h-32 border-t-2 border-l-2 border-primary/40 pointer-events-none"></div>
 
@@ -32,7 +32,7 @@ export default function Header({ data }: HeaderProps) {
               />
 
               <div
-                className={`absolute top-6 right-0 translate-x-1/2 ${data.status === "Alive" ? "bg-primary-container" : "bg-tertiary-container"} text-on-primary-container px-6 py-2 font-label text-xs font-bold tracking-[0.2em] uppercase shadow-xl`}
+                className={`absolute top-3 lg:top-6 right-20.5 lg:right-0 translate-x-1/2 ${data.status === "Alive" ? "bg-primary-container" : "bg-tertiary-container"} text-on-primary-container px-6 py-2 font-label text-xs font-bold tracking-[0.2em] uppercase shadow-xl`}
               >
                 Estado: {status}
               </div>

@@ -15,20 +15,22 @@ export default function InfoCharacter({ data }: InfoCharacterProps) {
 
   return (
     <div className="lg:col-span-7 pt-12">
-      <h1 className="font-headline text-7xl md:text-8xl italic font-extrabold text-on-surface mb-6 leading-tight tracking-tighter">
+      <h1 className="font-headline text-4xl lg:text-7xl md:text-8xl italic font-extrabold text-on-surface mb-6 leading-tight tracking-tighter">
         {name}
       </h1>
 
-      <div className="flex flex-wrap gap-2 mb-12">
-        {alias.map((item, i) => (
-          <span
-            key={i}
-            className="bg-surface-container-high px-4 py-1.5 font-label text-[10px] font-bold uppercase tracking-widest text-secondary border-l-2 border-outline-variant/30"
-          >
-            {item}
-          </span>
-        ))}
-      </div>
+      {alias.length > 0 && (
+        <div className="flex flex-wrap gap-2 mb-12">
+          {alias.map((item, i) => (
+            <span
+              key={i}
+              className="bg-surface-container-high px-4 py-1.5 font-label text-[10px] font-bold uppercase tracking-widest text-secondary border-l-2 border-outline-variant/30"
+            >
+              {item}
+            </span>
+          ))}
+        </div>
+      )}
 
       <div className="grid grid-cols-2 gap-y-10 gap-x-12 border-t border-outline-variant/20 pt-10">
         <div className="space-y-1">
@@ -61,6 +63,7 @@ export default function InfoCharacter({ data }: InfoCharacterProps) {
         <Button
           title="Personaje favorito"
           onClickHandler={() => setCharacter(data)}
+          customClasses="w-full"
         />
       </div>
     </div>

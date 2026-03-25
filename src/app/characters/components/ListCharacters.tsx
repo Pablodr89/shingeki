@@ -73,7 +73,7 @@ export default function ListCharacters() {
   }, [hasNextPage, fetchNextPage]);
 
   return (
-    <section className="flex flex-col gap-8 pb-20 pt-40">
+    <section className="flex flex-col gap-8 pb-20 pt-28 px-5 lg:px-0 lg:pt-40">
       <FiltersContainer
         searchText={searchText}
         setSearchText={setSearchText}

@@ -14,7 +14,7 @@ export default function PersonalData({ data }: PersonalDataProps) {
         Personal Data
       </h3>
 
-      <div className="bg-surface-container p-10 border-l-2 border-outline-variant/20 relative">
+      <div className="bg-surface-container p-5 lg:p-10 border-l-2 border-outline-variant/20 relative">
         <div className="absolute inset-0 grain-texture"></div>
 
         <ul className="space-y-8">

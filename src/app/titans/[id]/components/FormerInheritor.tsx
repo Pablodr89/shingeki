@@ -6,7 +6,7 @@ interface FormerProps {
 
 export default function FormerInheritor({ formerInheritors }: FormerProps) {
   return (
-    <section className="flex flex-col gap-10">
+    <section className="flex flex-col gap-10 px-5 lg:px-0">
       <h3 className="font-headline text-5xl text-on-surface">
         Antecesores del titan
       </h3>

@@ -17,7 +17,7 @@ export default function CharacterPage({ id }: { id: string }) {
         <>
           <Header data={data} />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-12 px-5 lg:px-0">
             <PersonalData data={data} />
 
             <CharacterFamily name={data?.name} relatives={data?.relatives} />
