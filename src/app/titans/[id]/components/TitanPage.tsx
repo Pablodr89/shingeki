@@ -8,7 +8,7 @@ export default function TitanPage({ id }: { id: string }) {
   const { data, isLoading } = useGetTitan(id);
 
   return (
-    <div className="flex flex-col gap-20 py-20">
+    <div className="animate-in flex flex-col gap-20 py-20">
       {isLoading ? (
         <Spinner />
       ) : (
