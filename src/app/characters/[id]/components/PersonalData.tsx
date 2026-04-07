@@ -11,7 +11,7 @@ export default function PersonalData({ data }: PersonalDataProps) {
   return (
     <div className="space-y-8">
       <h3 className="font-label text-xs font-black uppercase tracking-[0.4em] text-primary mb-6">
-        Personal Data
+        Datos Personales
       </h3>
 
       <div className="bg-surface-container p-5 lg:p-10 border-l-2 border-outline-variant/20 relative">
