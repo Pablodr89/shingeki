@@ -19,7 +19,7 @@ export default function CharacterFamily({
         </h3>
 
         <div className="bg-surface-container-low p-5 border-t-2 border-outline-variant/20">
-          <p className="font-headline text-xl italic mb-4">{name} family</p>
+          <p className="font-headline text-xl italic mb-4">Familia de {name}</p>
 
           <div className="grid grid-cols-2 gap-4">
             {members.map((member, i) => (
