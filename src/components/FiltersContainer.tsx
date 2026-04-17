@@ -5,6 +5,7 @@ import SearchBar from "./SearchBar";
 import { AppRoutes } from "@/AppRoutes";
 import { Gender, Status, Alliance } from "@/interfaces";
 import { Dispatch, SetStateAction } from "react";
+import { AllianceFilters, GenderFilters, StatusFilters } from "@/constants";
 
 interface FiltersContainerProps {
   searchText: string;
@@ -46,7 +47,7 @@ export default function FiltersContainer({
             {genderFilter !== undefined && setGenderFilter && (
               <Dropdown
                 title="Genero"
-                options={[Gender.ALL, Gender.MALE, Gender.FEMALE]}
+                options={GenderFilters}
                 selected={genderFilter}
                 setSelected={setGenderFilter}
                 setSearchText={setSearchText}
@@ -56,7 +57,7 @@ export default function FiltersContainer({
             {statusFilter !== undefined && setStatusFilter && (
               <Dropdown
                 title="Estado Vital"
-                options={[Status.ALL, Status.ALIVE, Status.DECEASED]}
+                options={StatusFilters}
                 selected={statusFilter}
                 setSelected={setStatusFilter}
                 setSearchText={setSearchText}
@@ -68,12 +69,7 @@ export default function FiltersContainer({
           setAlliance && (
             <Dropdown
               title="Alianza"
-              options={[
-                Alliance.ALL,
-                Alliance.ELDIA,
-                Alliance.MARLEY,
-                Alliance.NONE,
-              ]}
+              options={AllianceFilters}
               selected={alliance}
               setSelected={setAlliance}
               setSearchText={setSearchText}
