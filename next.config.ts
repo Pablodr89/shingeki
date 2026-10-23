@@ -7,7 +7,9 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "static.wikia.nocookie.net",
+        hostname: "www.attackontitanapi.com",
+        port: "",
+        pathname: "/**",
       },
     ],
   },
