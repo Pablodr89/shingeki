@@ -22,6 +22,7 @@ export default function CardListCharacters({
           width={300}
           height={400}
           priority
+          unoptimized
         />
 
         <div
@@ -44,13 +45,25 @@ export default function CardListCharacters({
 
         <div className="flex items-center gap-4 text-xs font-label uppercase tracking-tighter text-outline-variant">
           <span className="flex items-center gap-1">
-            <Image src={icons.person} alt="gender" width={20} height={20} />
+            <Image
+              src={icons.person}
+              alt="gender"
+              width={20}
+              height={20}
+              unoptimized
+            />
             {character.gender === "Ambiguous[9]" ? "Female" : character.gender}
           </span>
 
           {character.groups.length > 0 && (
             <span className="flex items-center gap-1">
-              <Image src={icons.shield} alt="group" width={20} height={20} />
+              <Image
+                src={icons.shield}
+                alt="group"
+                width={20}
+                height={20}
+                unoptimized
+              />
               {character.groups.map((group) => group.name).join(", ")}
             </span>
           )}

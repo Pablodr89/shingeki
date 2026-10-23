@@ -18,6 +18,7 @@ export default function CardListTitans({ titan }: { titan: Titan }) {
           width={300}
           height={400}
           priority
+          unoptimized
         />
 
         <div
@@ -39,7 +40,13 @@ export default function CardListTitans({ titan }: { titan: Titan }) {
         </div>
 
         <div className="flex items-start gap-2 text-xs font-label tracking-tighter text-outline-variant">
-          <Image src={icons.shield} alt="abilities" width={20} height={20} />
+          <Image
+            src={icons.shield}
+            alt="abilities"
+            width={20}
+            height={20}
+            unoptimized
+          />
 
           {titan.abilities.join(", ")}
         </div>

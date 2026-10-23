@@ -26,6 +26,7 @@ export default function Roles({ roles }: RolesProps) {
                     alt="icon attack"
                     width={40}
                     height={40}
+                    unoptimized
                   />
 
                   <div>

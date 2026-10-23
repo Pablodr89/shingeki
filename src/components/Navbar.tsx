@@ -54,6 +54,7 @@ export default function Navbar() {
                 height={40}
                 className="w-10 h-10 object-cover rounded-full"
                 priority
+                unoptimized
               />
             </Link>
           )}
@@ -67,6 +68,7 @@ export default function Navbar() {
                 height={40}
                 className="w-10 h-10 object-cover rounded-full"
                 priority
+                unoptimized
               />
             </Link>
           )}

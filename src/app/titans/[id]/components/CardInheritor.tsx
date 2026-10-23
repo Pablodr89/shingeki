@@ -25,6 +25,7 @@ export default function CardInheritor({ inheritor }: CardFormerInheritorProps) {
             width={300}
             height={400}
             priority
+            unoptimized
           />
         )}
 

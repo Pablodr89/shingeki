@@ -29,6 +29,7 @@ export default function Header({ data }: HeaderProps) {
           height={0}
           sizes="100vw"
           priority
+          unoptimized
         />
 
         <div className="absolute inset-0 z-20 flex flex-col justify-end px-12 pb-12 lg:pb-24">
